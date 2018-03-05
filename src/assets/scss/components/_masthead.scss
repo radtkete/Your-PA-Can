@@ -67,7 +67,6 @@ $masthead-border: 2px;
 
     h1 {
       letter-spacing: 0.1rem;
-      font-family: 'Roboto', serif;
       @include media-breakpoint-up(sm) {
         font-size: 3rem;
         letter-spacing: 0.25rem;
@@ -78,7 +77,6 @@ $masthead-border: 2px;
     }
 
 		p {
-      font-family: 'Open Sans', serif;
       max-width: 800px;
       @include margin($small-spacing null);
 		}
