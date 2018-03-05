@@ -1,0 +1,56 @@
+.wphts {
+	@include media-breakpoint-up(lg) {
+		padding-top: 35px;
+		padding-bottom: 0;
+	}
+
+	&__title {
+		font-weight: 900;
+		@include media-breakpoint-up(lg) {
+			padding-top: 70px;
+		}
+	}
+
+	&__disclaimer {
+		font-size: 10px;
+		margin-top: 1rem;
+		margin-bottom: 0;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: $base-spacing;
+		}
+	}
+
+	&__svg {
+		position: relative;
+		svg {
+			display: block;
+			margin: auto;
+			@include media-breakpoint-up(sm) {
+				max-width: 75%;
+			}
+			@include media-breakpoint-up(lg) {
+				margin: 0;
+				position: absolute;
+				bottom: 0;
+				max-width: 100%;
+			}
+		}
+	}
+	&__chart {
+		text-align: center;
+		margin-top: 35px;
+		@include media-breakpoint-up(lg) {
+			margin-top: 0;
+			padding-top: 0;
+			padding-bottom: $base-spacing;
+		}
+		p {
+			line-height: 1.4;
+			margin-bottom: 0;
+			font-size: 1.1rem;
+			max-width: 90%;
+			font-weight: 500;
+			display: inline-block;
+		}
+	}
+}

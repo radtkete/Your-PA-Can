@@ -1,0 +1,85 @@
+.footer {
+	background-color: $color-orange;
+	@include padding($base-spacing null);
+	color: darken($color-orange, 20%);
+	@include mq($min-width: 768px) {
+		@include padding($small-spacing null);
+	}
+	a {
+		color: $white;
+	}
+}
+
+.footer-logo {
+	@include mq($max-width: 768px) {
+		margin: $small-spacing auto;
+	}
+	.svg--aapa {
+		height: 52px;
+		width: 104px;
+		display: inline-block;
+		line-height: 0;
+		vertical-align: middle;
+		margin-right: $base-spacing;
+
+		svg {
+			@include size(100%);
+			display: block;
+		}
+	}
+}
+
+.footer__nav {
+	@include mq($max-width: 768px) {
+		text-align: center;
+		@include margin(null auto);
+	}
+
+	ul.list-inline {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		li {
+			display: inline-block;
+			margin-right: $small-spacing;
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+
+		.nav-link {
+			&:hover {
+				color: darken($color-orange, 20%);
+			}
+			&:first-of-type {
+				padding-left: 0;
+			}
+		}
+	}
+}
+
+.footer__social {
+	color: $white;
+	@include mq($max-width: 768px) {
+		@include margin(null auto ($small-spacing / 2));
+	}
+
+	a {
+		display: inline-block;
+		@include size($base-spacing);
+		background-color: darken($color-orange, 20%);
+		border-radius: $base-border-radius;
+		font-size: 1.25rem;
+		line-height: $base-spacing;
+		margin-right: $base-border-radius;
+		@each $color-name, $color in $social_colors {
+			&.#{$color-name}:hover {
+				background: $color;
+			}
+		}
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+}

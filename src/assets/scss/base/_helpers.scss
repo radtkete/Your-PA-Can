@@ -1,0 +1,103 @@
+.text-center {
+	text-align: center;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.p-2 {
+	padding: .5rem !important;
+}
+
+.mb-0 {
+	margin-bottom: 0;
+}
+
+.mt-0 {
+	margin-top: 0;
+}
+
+.p-0 {
+	padding: 0;
+}
+
+.lh-heading {
+	line-height: $heading-line-height;
+}
+
+.lh-1 {
+	line-height: $no-line-height;
+}
+
+.fw-900 {
+	font-weight: 900;
+}
+
+.align-baseline {
+	vertical-align: baseline !important;
+} // Browser default
+.align-top {
+	vertical-align: top !important;
+}
+
+.align-middle {
+	vertical-align: middle !important;
+}
+
+.align-bottom {
+	vertical-align: bottom !important;
+}
+
+.align-text-bottom {
+	vertical-align: text-bottom !important;
+}
+
+.align-text-top {
+	vertical-align: text-top !important;
+}
+
+
+
+// Color Helpers ====================================================================
+$color-list: (
+	"orange": #f58220, "purple": #62489d, "teal": #017581, "gray": #e7e7e8, "blue": #003c69, "black": #333, "white": #fff
+);
+
+@each $color-name, $color-value in $color-list {
+	.bg-#{$color-name} {
+		background-color: $color-value;
+	}
+
+	.text-#{$color-name} {
+		color: $color-value;
+	}
+
+	.fill-#{$color-name} {
+		fill: $color-value;
+	}
+
+	.link-#{$color-name} {
+		color: $color-value;
+
+		&:hover {
+			color: shade($color-value, 25%);
+		}
+	}
+}
+
+// .fill-gray {
+// 	fill: #e7e7e8
+// }
+
+// .fill-blue {
+// 	fill: #003c69
+// }
+
+// .fill-teal {
+// 	fill: #017581
+// }
+
+// .fill-white {
+// 	fill: #fff
+// }

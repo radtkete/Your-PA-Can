@@ -1,0 +1,110 @@
+@each $color-name, $color in $progress_colors {
+	.progress {
+		&.progress__#{$color-name} {
+			&:after {
+				border-color: shade($color, 30%);
+			}
+
+			.progress-bar {
+				border-color: $color;
+			}
+
+			.progress-left .progress-bar {
+				animation: loading-#{$color-name} 1.5s linear forwards 1.8s;
+			}
+
+			.progress-value {
+				color: $color;
+			}
+		}
+	}
+}
+
+.progress {
+	@include size(150px);
+	line-height: 150px;
+	background: none;
+	margin: 0 auto $small-spacing;
+	box-shadow: none;
+	position: relative;
+
+	&:after {
+		content: "";
+		@include size(100%);
+		border-radius: 50%;
+		border: $small-spacing solid $white;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	> span {
+		width: 50%;
+		height: 100%;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		z-index: 1;
+	}
+
+	.progress-left {
+		left: 0;
+
+		.progress-bar {
+			left: 100%;
+			border-top-right-radius: 80px;
+			border-bottom-right-radius: 80px;
+			border-left: 0;
+			transform-origin: center left;
+		}
+	}
+
+	.progress-bar {
+		@include size(100%);
+		background: none;
+		border-width: $small-spacing;
+		border-style: solid;
+		position: absolute;
+		top: 0;
+	}
+
+	.progress-right {
+		right: 0;
+
+		.progress-bar {
+			left: -100%;
+			border-top-left-radius: 80px;
+			border-bottom-left-radius: 80px;
+			border-right: 0;
+			transform-origin: center right;
+			animation: loading-full 1.8s linear forwards;
+		}
+	}
+
+	.progress-value {
+		@include size(90%);
+		border-radius: 50%;
+		background: $white;
+		font-size: 2.5rem;
+    font-weight: 700;
+		line-height: 135px;
+		text-align: center;
+		position: absolute;
+		top: 5%;
+		left: 5%;
+	}
+}
+
+.sub-large {
+	display: none;
+	@include media-breakpoint-up(lg) {
+		display: block;
+	}
+}
+
+.sub-small {
+	display: block;
+	@include media-breakpoint-up(lg) {
+		display: none;
+	}
+}

@@ -1,0 +1,36 @@
+figure {
+	margin: 0;
+}
+
+img,
+picture {
+	margin: 0;
+	max-width: 100%;
+}
+
+
+// Video
+.video-wrapper {
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%; // For ratio 16:9. 75% if ratio is 4:3
+	position: relative;
+	margin-bottom: $base-spacing;
+
+	embed,
+	object,
+	iframe {
+		@include position(absolute, 0 null null 0);
+		@include size(100%);
+	}
+}
+
+// Media Item
+.media {
+	display: flex;
+	align-items: flex-start;
+}
+
+.media-body {
+	flex: 1;
+}

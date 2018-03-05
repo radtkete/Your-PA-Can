@@ -1,0 +1,39 @@
+@keyframes loading-full {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(180deg);
+	}
+}
+
+@keyframes loading-purple {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(147.6deg);
+	}
+}
+
+@keyframes loading-orange {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(151.2deg);
+	}
+}
+
+@keyframes loading-teal {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(154.8deg);
+	}
+}

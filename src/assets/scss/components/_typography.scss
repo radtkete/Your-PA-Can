@@ -1,0 +1,125 @@
+.aside-section {
+	margin-bottom: $base-spacing;
+	text-align: center;
+	svg {
+		height: 100px;
+	}
+	@include media-breakpoint-up(lg) {
+		margin-bottom: 0;
+		&__left {
+			text-align: left;
+		}
+		&__right {
+			text-align: right;
+		}
+	}
+}
+
+
+$title-spacing: 2.25rem; // 36px
+$bar-height: $spacer * .25;
+
+
+.section-title {
+	line-height: $heading-line-height;
+	font-weight: 900;
+	display: block;
+	overflow: hidden;
+	margin-bottom: 0;
+	@include media-breakpoint-up(sm) {
+		font-size: 3.75rem;
+	}
+	@include media-breakpoint-up(lg) {
+		line-height: 1;
+	}
+	&__aside {
+		text-transform: uppercase;
+		line-height: $heading-line-height;
+		font-weight: 900;
+		display: block;
+		overflow: hidden;
+		@include media-breakpoint-up(sm) {
+			font-size: 3.75rem;
+		}
+		@include media-breakpoint-up(lg) {
+			line-height: 1;
+			span {
+				display: block;
+			}
+		}
+		small {
+			font-weight: inherit;
+			font-size: 30px;
+			&.small-s {
+				font-size: 60%;
+			}
+		}
+	}
+	&__bars {
+		color: $white;
+		text-transform: uppercase;
+		font-weight: 900;
+		margin: auto auto $title-spacing;
+		padding-left: $spacer;
+		padding-right: $spacer;
+		position: relative;
+		text-align: center;
+		@include media-breakpoint-up(sm) {
+			font-size: 2rem;
+		&:before,
+		&:after {
+			background-color: $white;
+			content: '';
+			height: $bar-height;
+			width: 6rem;
+			display: block;
+			top: 50%;
+			margin-top: -$bar-height / 2;
+			position: absolute;
+		}
+		&:before {
+			left: 100%;
+		}
+		&:after {
+			right: 100%;
+		}
+	}
+		@include media-breakpoint-up(md) {
+			font-size: 2.5rem;
+		}
+		@include media-breakpoint-up(lg) {
+			font-size: 3.25rem;
+			margin-bottom: $title-spacing * 2;
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: 3.75rem;
+		}
+	}
+}
+
+
+.arrow_header {
+	padding: $base-spacing;
+	background-color: $black;
+	position: relative;
+	color: $white;
+	margin-bottom: $base-spacing;
+	&::before {
+		content: "";
+		@include position(absolute, 100% null null 50%);
+		@include triangle("down", ($base-spacing * 2), $base-spacing, $black);
+		margin-left: -$small-spacing;
+	}
+	&__orange {
+		background-color: $color-orange;
+		&::before {
+			border-top-color: $color-orange;
+		}
+	}
+	&__teal {
+		background-color: $color-teal;
+		&::before {
+			border-top-color: $color-teal;
+		}
+	}
+}

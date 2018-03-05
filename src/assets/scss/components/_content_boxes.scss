@@ -1,0 +1,56 @@
+.icon-sidexside {
+	svg {
+		vertical-align: middle;
+		display: inline-block;
+		@include size(100px);
+	}
+	h1 {
+		display: inline-block;
+		font-size: 60px;
+		font-weight: 900;
+		line-height: 1;
+		@include margin(0 0 0 10px);
+		text-align: center;
+		text-overflow: ellipsis;
+		vertical-align: middle;
+		small {
+			font-size: 40%;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+	}
+}
+
+
+
+.icon-text-box {
+	text-align: center;
+	margin-bottom: $small-spacing;
+	@include media-breakpoint-up(sm) {
+		text-align: left;
+	}
+	@include media-breakpoint-up(lg) {
+		margin-bottom: 0;
+	}
+	svg {
+		vertical-align: middle;
+		display: inline-block;
+		@include size(70px);
+		margin-right: $small-spacing / 2;
+	}
+	h1 {
+		font-weight: 900;
+		vertical-align: middle;
+		display: inline-block;
+		small {
+			line-height: inherit;
+			font-weight: inherit;
+		}
+	}
+	&__content {
+		text-align: center;
+		@include media-breakpoint-up(sm) {
+			text-align: left;
+		}
+	}
+}

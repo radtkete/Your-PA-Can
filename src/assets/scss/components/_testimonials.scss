@@ -1,0 +1,43 @@
+.small-section {
+  &.testimonials-section {
+    background: $color-purple url('../assets/img/overlay.png');
+    color: rgba($white, 0.75);
+    .title {
+      background: $color-purple url('../assets/img/overlay.png');
+      color: $white;
+    }
+  }
+}
+
+
+.testimonials-horizontal {
+  margin-bottom: 1rem;
+	&__logo {
+    display: inline-block;
+    height: 60px;
+    max-width: 225px;
+    svg,
+    img {
+      overflow: hidden;
+      height: 100%;
+      position: relative;
+      padding: $small-spacing / 2;
+      background: $white;
+    }
+    img {
+      width: auto !important;
+    }
+	}
+
+	&__quote {
+    @include margin($small-spacing null);
+    line-height: 1.35;
+  }
+
+  &__source {
+    color: $color-orange;
+    a {
+      font-weight: inherit;
+    }
+  }
+}

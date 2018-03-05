@@ -1,0 +1,59 @@
+// Imports ====================================================================
+@import '../../../node_modules/sass-mediaqueries/_media-queries';
+@import '../../../node_modules/bootstrap/scss/bootstrap-grid';
+@import '../../../node_modules/bourbon/core/bourbon';
+@import '../../../node_modules/spinkit/scss/spinners/11-folding-cube';
+
+@import 'base/variables';
+@import 'base/helpers';
+@import 'base/animation';
+@import 'base/buttons';
+@import 'base/layout';
+@import 'base/media';
+@import 'base/typography';
+
+// Components ===============================================================
+@import 'components/typography';
+@import 'components/masthead';
+@import 'components/content_boxes';
+@import 'components/intro';
+@import 'components/testimonials';
+@import 'components/counters';
+@import 'components/footer';
+@import 'components/award';
+@import 'components/wphts';
+@import 'components/charts';
+
+
+
+// Theme ====================================================================
+@import 'vendor/owl/owl.carousel';
+@import 'vendor/owl/owl.theme.green';
+
+.page-loader{
+	display:block;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: $color-orange;
+	z-index: 100000;
+}
+
+
+
+.sk-folding-cube {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -20px 0 0 -20px;
+	position: relative;
+	-webkit-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
+	.sk-cube:before {
+		background-color: $color-purple;
+	}
+}
