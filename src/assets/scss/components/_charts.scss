@@ -1,11 +1,11 @@
 .height-400 {
-	height: 250px;
-	@include media-breakpoint-up(sm) {
-		height: 350px;
-	}
-	@include media-breakpoint-up(md) {
-		height: 400px;
-	}
+	height: 400px;
+	// @include media-breakpoint-up(sm) {
+	// 	height: 350px;
+	// }
+	// @include media-breakpoint-up(md) {
+	// 	height: 400px;
+	// }
 }
 
 .progress-icons {

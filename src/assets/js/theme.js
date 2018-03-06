@@ -103,7 +103,8 @@
 
 		const tooltip = {
 			trigger: 'item',
-			formatter: '{a} <br/>{b}: {c} ({d}%)',
+			confine: true,
+			formatter: '{a} <br/>{b}: {d}%',
 		};
 
 		const color = ['#f58220', '#003c69', '#017581', '#acaeb1', '#62489d', '#a4203d'];
@@ -161,16 +162,16 @@
 			title: {
 				text: 'Specialties',
 				subtext: '2017 AAPA Salary Survey',
-				x: 'center',
+				left: 'center',
+				top: 20,
 			},
 
 			tooltip,
 
-			// legend: {
-			// 	orient: 'vertical',
-			// 	x: 'left',
-			// 	data: ['Primary Care', 'Internal Med. Subspecialties', 'Emergency Medicine', 'Pediatric', 'Other', 'Surgical'],
-			// },
+			legend: {
+				orient: 'horizontal',
+				bottom: 0,
+			},
 
 			color,
 
@@ -182,11 +183,19 @@
 				{
 					name: 'Specialties',
 					type: 'pie',
-					radius: '50%',
-					center: ['50%', '57.5%'],
+					radius: '55%',
+					center: ['50%', '50%'],
+					label: {
+						show: false,
+					},
+					animationType: 'scale',
+					animationEasing: 'elasticOut',
+					animationDelay(idx) {
+						return Math.random() * 200;
+					},
 					data: [
 						{ value: 24.6, name: 'Primary Care' },
-						{ value: 10.7, name: 'Int. Med. Subspecialties' },
+						{ value: 10.7, name: 'Internal Med. Subspecialties' },
 						{ value: 8.9, name: 'Emergency Medicine' },
 						{ value: 1.3, name: 'Pediatric Subspecialties' },
 						{ value: 28.6, name: 'Other' },
@@ -220,7 +229,8 @@
 	function initChartWorkSettings() {
 		const tooltip = {
 			trigger: 'item',
-			formatter: '{a} <br/>{b}: {c} ({d}%)',
+			confine: true,
+			formatter: '{a} <br/>{b}: {d}%',
 		};
 
 		const color = ['#f58220', '#017581', '#a4203d', '#003c69', '#62489d'];
@@ -281,6 +291,11 @@
 				x: 'center',
 			},
 			tooltip,
+
+			legend: {
+				orient: 'horizontal',
+				bottom: 0,
+			},
 			color,
 			toolbox,
 			calculable: true,
@@ -288,8 +303,16 @@
 				{
 					name: 'Work Settings',
 					type: 'pie',
-					radius: '50%',
-					center: ['50%', '57.5%'],
+					radius: '55%',
+					center: ['50%', '50%'],
+					label: {
+						show: false,
+					},
+					animationType: 'scale',
+					animationEasing: 'elasticOut',
+					animationDelay(idx) {
+						return Math.random() * 200;
+					},
 					data: [
 						{ value: 38.3, name: 'Hospital' },
 						{ value: 6.1, name: 'Urgent Care Center' },
