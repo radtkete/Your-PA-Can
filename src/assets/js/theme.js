@@ -186,7 +186,7 @@
 					center: ['50%', '57.5%'],
 					data: [
 						{ value: 24.6, name: 'Primary Care' },
-						{ value: 10.7, name: 'Internal Med. Subspecialties' },
+						{ value: 10.7, name: 'Int. Med. Subspecialties' },
 						{ value: 8.9, name: 'Emergency Medicine' },
 						{ value: 1.3, name: 'Pediatric Subspecialties' },
 						{ value: 28.6, name: 'Other' },
