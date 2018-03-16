@@ -27,6 +27,7 @@
     "imagesloaded": "^4.1.4",
     "jquery-countto": "^1.2.0",
     "jquery.appear": "^1.0.1",
+    "moment": "^2.21.0",
     "owl.carousel": "^2.2.0",
     "psi": "^2.0.4",
     "run-sequence": "^1.2.1",
